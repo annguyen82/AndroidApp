@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pphighend.hotellocation.ChiTietKhachSan">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarChiTiet"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#da1818"
+        app:titleTextColor="@android:color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollview"
+        android:layout_below="@id/toolbarChiTiet">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imagehotel"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@android:drawable/ic_menu_report_image"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <TextView
+                android:id="@+id/txtnameHotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imagehotel"
+                android:paddingLeft="45dp"
+                android:background="@drawable/border_style"
+                android:text="Textview"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtAddressHotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtnameHotel"
+                android:background="@drawable/border_style"
+                android:text="Textview"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:paddingLeft="35dp"
+                android:textStyle="normal|italic">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtMessenger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtAddressHotel"
+                android:background="@drawable/border_style"
+                android:text="Tất cả đánh giá"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtnameHotel"
+
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/ic_location" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imagehotel"
+
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/ic_hotel" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listDanhGia"
+        android:scrollbars="none"
+        android:layout_below="@id/scrollview"
+        >
+
+    </ListView>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_location"
+        android:icon="@mipmap/ic_favorite_black_24dp"
+        android:title="@string/itemmenu1"/>
+    <item android:id="@+id/nav_add"
+        android:icon="@mipmap/ic_account_box_black_24dp"
+        android:title="Thêm khách sạn"></item>
+    <item
+        android:id="@+id/nav_sharelocation"
+        android:icon="@mipmap/ic_send_black_24dp"
+        android:title="@string/itemmenu2"/>
+    <item
+        android:id="@+id/nav_help"
+        android:icon="@mipmap/ic_help_black_24dp"
+        android:title="@string/itemmenu3"/>
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@mipmap/ic_info_black_24dp"
+        android:title="@string/itemmenu4"/>
+    <item
+        android:id="@+id/nav_logout"
+        android:icon="@mipmap/ic_settings_power_black_24dp"
+        android:title="@string/itemmenu5"/>
+</menu>

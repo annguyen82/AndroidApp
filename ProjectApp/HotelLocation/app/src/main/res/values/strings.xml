@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Hotel Location</string>
+    <string name="facebook_app_id">171848966862283</string>
+    <string name="fb_login_protocol_scheme">fb171848966862283</string>
+    <string name="map_api_key">AIzaSyAHfU6EW9KxjyJlyh_ADLUP8MpZ3cQTeeU</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="itemmenu1">Địa điểm yêu thích</string>
+    <string name="itemmenu2">Chia sẻ địa điểm</string>
+    <string name="itemmenu3">Hướng dẫn sử dụng</string>
+    <string name="itemmenu4">Thông tin ứng dụng</string>
+    <string name="itemmenu5">Đăng xuất</string>
+
+</resources>

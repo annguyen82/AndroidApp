@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pphighend.hotellocation.thongTinActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/unnamed"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:text="Ứng dụng tìm kiếm khách sạn"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textViewB"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewA"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="130dp"
+        android:text="Nhóm phát triển"
+        android:textColor="@android:color/black"
+        android:textSize="16dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/textViewC"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewB"
+        android:layout_marginLeft="115dp"
+        android:text="----PPHighEnd----"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18dp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/textViewD"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewC"
+        android:layout_marginLeft="145dp"
+        android:text="Verson 1.0"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        android:textStyle="italic" />
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Hướng dẫn sử dụng"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:paddingLeft="10dp"
+        android:paddingVertical="7dp"
+        android:id="@+id/title"
+        android:background="#00aeff"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:textColor="#000"
+                android:layout_gravity="center_vertical|right"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"
+                android:id="@+id/content"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
