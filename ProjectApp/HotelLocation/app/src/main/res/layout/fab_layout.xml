@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin = "16dp"
+        android:backgroundTint="#00aaff"
+        app:borderWidth="0dp"
+        android:src="@drawable/directions"
+        app:elevation="10dp"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin = "16dp"
+        android:backgroundTint="#00aaff"
+        android:src="@drawable/favorite"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        android:visibility="invisible"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin = "16dp"
+        android:backgroundTint="#00aaff"
+        app:borderWidth="0dp"
+        android:src="@drawable/map"
+        app:elevation="10dp"
+        android:visibility="invisible"
+        />
+</FrameLayout>

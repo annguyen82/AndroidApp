@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pphighend.hotellocation.ThemDanhGia">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Thêm đánh giá"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/textView1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá theo sao"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/textView1"
+        android:id="@+id/textView3" />
+
+    <LinearLayout
+        android:id="@+id/linerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="12dp"
+        android:background="#cbcfcf"
+        android:orientation="vertical">
+        <RatingBar
+            android:id="@+id/mratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnThemDanhGia"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:progressBackgroundTint="#b6b6b1"
+            android:progressTint="#fdfd00"
+            android:rating="5"
+            android:secondaryProgressTint="#c9c9bd"
+            android:stepSize="1" />
+        <TextView
+            android:id="@+id/tvRatingScale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Tuyệt vời. Tôi thích nó"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Viết đánh giá của bạn"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/linerlayout"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/txtDanhGia"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_editext"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:hint="Viết đánh giá vào đây"
+        android:paddingLeft="10dp"
+        android:gravity="top"
+        android:textColor="@android:color/black" />
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/btnThemDanhGia"
+        android:background="@drawable/rounded_btn"
+        android:text="Đánh giá"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="18dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/txtDanhGia"/>
+    <TextView
+        android:id="@+id/textViewDone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnThemDanhGia"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

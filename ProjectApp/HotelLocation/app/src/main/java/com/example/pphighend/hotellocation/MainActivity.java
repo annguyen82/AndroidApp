@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +53,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
+    CheckBox cb;
+    SharedPreferences sharedPreferences;
     CallbackManager callbackMacnager;
     LoginButton loginButton;
     Button btnDangNhap;
@@ -77,21 +81,24 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         else {
-            Toast.makeText(MainActivity.this,"Welcome", Toast.LENGTH_SHORT).show();
             setContentView(R.layout.activity_main);
         }
         profileFB=new TaiKhoan();
 
 
         FacebookSdk.sdkInitialize(getApplicationContext());
-
         callbackMacnager = CallbackManager.Factory.create();
+        cb = (CheckBox)findViewById(R.id.cb);
         loginButton = (LoginButton) findViewById(R.id.btnDangNhapFace);
         txtTenDangNhap=(EditText) findViewById(R.id.txtTenDangNhap);
         txtMatKhau=(EditText) findViewById(R.id.txtMatKhau);
         btnDangNhap=(Button)findViewById(R.id.btnDangNhap);
         btnDangKy=(Button) findViewById(R.id.btnDangKy);
         textView3=(TextView)findViewById(R.id.textView3);
+        sharedPreferences = getSharedPreferences("LoginData", MODE_PRIVATE);
+        txtTenDangNhap.setText(sharedPreferences.getString("TaiKhoan",""));
+        txtMatKhau.setText(sharedPreferences.getString("MatKhau",""));
+        cb.setChecked(sharedPreferences.getBoolean("Checked",false));
         //profilePictureView = (ProfilePictureView) findViewById(R.id.image) ;
         loginButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday", "user_friends"));
         setLogin_Button();
@@ -105,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
               Intent intent=new Intent(MainActivity.this, Main2Activity.class);
               byIntent(intent);
               startActivity(intent);
+              finish();
               return;
           }
           if (TenDangNhap.equals("") || MatKhau.equals("")) {
@@ -118,9 +126,24 @@ public class MainActivity extends AppCompatActivity {
                   profileFB.setEmail(taikhoan.getEmail());
                   profileFB.setMatKhau(taikhoan.getMatKhau());
                   profileFB.setHinhAnh(taikhoan.getHinhAnh());
+                  if(cb.isChecked())
+                  {
+                      SharedPreferences.Editor editor = sharedPreferences.edit();
+                      editor.putString("TaiKhoan", TenDangNhap);
+                      editor.putString("MatKhau", MatKhau);
+                      editor.putBoolean("Checked", true);
+                      editor.commit();
+                  }else {
+                      SharedPreferences.Editor editor = sharedPreferences.edit();
+                      editor.remove("TaiKhoan");
+                      editor.remove("MatKhau");
+                      editor.remove("Checked");
+                      editor.commit();
+                  }
                   Intent intent=new Intent(MainActivity.this, Main2Activity.class);
                   byIntent(intent);
                   startActivity(intent);
+                  finish();
               }else Toast.makeText(MainActivity.this, "Tài khoản hoặc mật khẩu không đúng. Bạn vui lòng nhập lại.", Toast.LENGTH_SHORT).show();
           }
           }
@@ -230,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
                 txtTenDangNhap.setEnabled(false);
                 btnDangKy.setVisibility(View.INVISIBLE);
                 textView3.setVisibility(View.INVISIBLE);
+                cb.setVisibility(View.INVISIBLE);
             }
 
             @Override

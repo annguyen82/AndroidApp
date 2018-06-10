@@ -2,11 +2,13 @@ package com.example.pphighend.hotellocation;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +64,16 @@ public class FavoriteActivity extends AppCompatActivity {
         HotelAdapter adapter = new HotelAdapter(FavoriteActivity.this, R.layout.item_favorite, arrHotel);
 
         hotelListView.setAdapter(adapter);
-        
+
+        hotelListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Main2Activity.hotelChiTiet = arrHotel.get(i);
+
+                Intent intent = new Intent(FavoriteActivity.this, ChiTietKhachSan.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

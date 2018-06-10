@@ -48,7 +48,13 @@
             android:name=".thongTinActivity"
             android:label="Thông tin ứng dụng"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Share"></activity>
+        <activity android:name=".Share" />
+        <activity android:name=".ThemDanhGia"
+            android:label="Thêm đánh giá"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity android:name=".NearHotelActivity"></activity>
     </application>
 
 </manifest>

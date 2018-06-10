@@ -26,14 +26,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
-        <!--<SearchView-->
-            <!--android:id="@+id/btnSearch"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="52dp"-->
-            <!--android:layout_marginTop="40dp"-->
-            <!--android:background="@color/com_smart_login_code"-->
-            <!--tools:layout_editor_absoluteX="69dp"-->
-            <!--tools:layout_editor_absoluteY="129dp" />-->
 
         <RelativeLayout
             android:layout_width="290dp"
@@ -61,6 +53,19 @@
                 android:layout_marginLeft="257dp"
                 android:src="@drawable/ic_clear"/>
         </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="18dp"
+            android:backgroundTint="#00aaff"
+            android:src="@drawable/panorama"
+            app:borderWidth="0dp"
+            app:elevation="10dp"/>
+
+        <include layout="@layout/fab_layout"/>
     </FrameLayout>
 
     <android.support.design.widget.NavigationView
@@ -70,7 +75,5 @@
         app:menu="@menu/navigation_menu"
         android:layout_gravity = "start"
         app:headerLayout="@layout/header">
-
     </android.support.design.widget.NavigationView>
-
 </android.support.v4.widget.DrawerLayout>

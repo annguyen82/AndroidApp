@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.pphighend.hotellocation"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -35,6 +35,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:15.0.0'
     implementation 'com.google.android.gms:play-services-places:15.0.0'
     implementation 'com.android.support:design:27.1.1'
+    //Add library
+    compile 'br.com.simplepass:loading-button-android:1.7.2'
 }
 // Add to the bottom of the file
 apply plugin: 'com.google.gms.google-services'

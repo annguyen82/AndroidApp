@@ -7,9 +7,20 @@ import java.io.Serializable;
  */
 
 public class danhgia implements Serializable {
+
+
+    private int star;
     private String NoiDung;
     private String TenDangNhap;
     private Point ToaDo;
+
+    public int getStar() {
+        return star;
+    }
+
+    public void setStar(int star) {
+        this.star = star;
+    }
 
     public Point getToaDo() {
         return ToaDo;
