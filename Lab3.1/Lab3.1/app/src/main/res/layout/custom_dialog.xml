@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_basex2"
+    android:gravity="center">
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:text="@string/contact"/>
+
+        <ImageView
+            android:padding="@dimen/margin_basex2"
+            android:id="@+id/iv_close"
+            android:layout_width="50dp"
+            android:src="@drawable/ic_close"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_name1"
+            android:text="@string/name"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/tv_name"
+            android:text="Tang Quang Huy"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/tv_email1"
+            android:text="@string/email"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/tv_email"
+            android:text="abc@gmail.com"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_weight="6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_phone1"
+            android:text="@string/phone"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/tv_phone"
+            android:layout_weight="10"
+            android:text="01675566519"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_basex3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_basex3"
+        android:layout_marginRight="@dimen/margin_basex3"
+        android:layout_marginBottom="@dimen/margin_basex3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_base"
+            android:layout_marginRight="@dimen/margin_base"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:id="@+id/iv_send"
+                android:src="@drawable/ic_email"
+                android:layout_width="50dp"
+
+
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_basex2"/>
+            <TextView
+                android:id="@+id/tv_send"
+                android:text="@string/send"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:padding="@dimen/margin_base"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_base"
+            android:layout_marginRight="@dimen/margin_base"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/margin_basex2"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_call"
+                android:text="Call"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:padding="@dimen/margin_basex2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
